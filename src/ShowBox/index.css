@@ -1,0 +1,9 @@
+.show-box--container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.show-box--text {
+  font-size: 40px;
+}
