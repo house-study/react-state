@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css";
 import Input from "../Input";
 
 const ShowBox = () => {
+  const [text, setText] = useState("");
+
+  const handleChange = (e) => {
+    setText(e.target.value);
+  };
+
   return (
     <div className="show-box--container">
-      <Input />
-      <p className="show-box--text">
-        {/* 여기 안에 Input에서 입력한 값이 나와야 해요. 주석은 지워주세요 */}
+      <Input onChange={handleChange} />
+      <p role="paragraph" className="show-box--text">
+        {text || "값을 입력해주세요"}
       </p>
     </div>
   );
