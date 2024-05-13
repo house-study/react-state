@@ -14,16 +14,11 @@ const ShowBox = () => {
     <div className="show-box--container">
       <Input value={input} onChange ={changeInput} />
       <p className="show-box--text">
-      {
-        input==="" ? (    
-            <p>Please input</p>       
-        ) : (
-          <p>Input words :{ input}</p>
-        )
-      }
+        {
+          input ==='' ? '값을 입력해주세요' : input
+        }
       </p>
     </div>
   );
 };
-
 export default ShowBox;
