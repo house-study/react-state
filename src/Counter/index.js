@@ -1,13 +1,18 @@
-import React from "react";
+import React,{useState} from "react";
 import "./index.css";
 
 // Counter의 시작은 0부터 시작합니다.
 const Counter = () => {
+  const [cnt, setCnt] = useState(0);
+
+  const onClickIncrease = () => {setCnt(cnt + 1)};
+  const onClickDecrease = () => {setCnt(cnt - 1)};
+
   return (
     <div className="counter--container">
-      <button>-</button>
-      <p>{/** 여기에 카운트가 나타납니다. 주석 삭제 후 작성해주세요 */}</p>
-      <button>+</button>
+      <button onClick={onClickDecrease}>-</button>
+      <p>{cnt}</p>
+      <button onClick={onClickIncrease}>+</button>
     </div>
   );
 };
