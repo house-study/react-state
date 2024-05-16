@@ -5,8 +5,23 @@ import "./index.css";
 const Counter = () => {
   const [cnt, setCnt] = useState(0);
 
-  const onClickIncrease = () => {setCnt(cnt + 1)};
-  const onClickDecrease = () => {setCnt(cnt - 1)};
+  const onClickIncrease = () => {
+    if(cnt < 10){
+      setCnt(cnt + 1)
+    }
+    else{
+      setCnt(10);
+    }
+  };
+    
+  const onClickDecrease = () => {
+    if(cnt > -10){
+      setCnt(cnt - 1)
+    }
+    else{
+      setCnt(-10)
+    };  
+  };
 
   return (
     <div className="counter--container">
@@ -16,5 +31,6 @@ const Counter = () => {
     </div>
   );
 };
+
 
 export default Counter;

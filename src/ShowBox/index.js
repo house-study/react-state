@@ -2,15 +2,19 @@ import React from "react";
 import "./index.css";
 import Input from "../Input";
 
-const ShowBox = () => {
+const ShowBox = (props) => {
   return (
     <div className="show-box--container">
-      <Input />
+      <Input value="text"/>
       <p className="show-box--text">
-        {/* 여기 안에 Input에서 입력한 값이 나와야 해요. 주석은 지워주세요 */}
+        {/* {여기에 표시가 되어야 합니다.} */}
       </p>
     </div>
   );
+};
+
+ShowBox.defaultProps = {
+  text: ''
 };
 
 export default ShowBox;
