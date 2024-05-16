@@ -1,17 +1,20 @@
 import React, {useState} from "react";
 
-const Input = (props) => {
+const Input = () => {
   const [text, setTxt] = useState('');
 
   const updateText = (e) => {
-    setTxt(e.target.value);
+      setTxt(e.target.value);
   }
 
-  return <input onChange={updateText} value={text}/>;
+  return (
+  <div className="show-box--container">
+    <input onChange={updateText} value={text} />
+    <p className="show-box--text">
+    {text}
+    </p>
+    </div>
+    );
 };
 
 export default Input;
-
-Input.defaultProps={
-  content:'값을 입력해주세요'
-};
