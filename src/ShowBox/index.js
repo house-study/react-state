@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css";
 import Input from "../Input";
 
 const ShowBox = () => {
+  const [input, setInput] = useState("");
+   
+  const changeInput = (e) =>{
+    e.preventDefault();
+    setInput(e.target.value);
+    
+  }
   return (
     <div className="show-box--container">
-      <Input />
+      <Input value={input} onChange ={changeInput} />
       <p className="show-box--text">
-        {/* 여기 안에 Input에서 입력한 값이 나와야 해요. 주석은 지워주세요 */}
+        {
+          input ==="" ? "값을 입력해주세요" : input
+        }
       </p>
     </div>
   );
 };
-
 export default ShowBox;
