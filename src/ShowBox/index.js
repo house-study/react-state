@@ -15,7 +15,7 @@ const ShowBox = () => {
       <Input value={input} onChange ={changeInput} />
       <p className="show-box--text">
         {
-          input ==='' ? '값을 입력해주세요' : input
+          input ==="" ? "값을 입력해주세요" : input
         }
       </p>
     </div>
