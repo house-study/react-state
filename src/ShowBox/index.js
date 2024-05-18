@@ -13,7 +13,7 @@ const ShowBox = () => {
     <div className="show-box--container">
       <Input value ={text} onChange={UpdateText} />
       <p className="show-box--text">
-        {text === ''? '값을 입력하세요' : text}
+        {text === ''? '값을 입력해주세요' : text}
       </p>
     </div>
   );
