@@ -3,30 +3,24 @@ import "./index.css";
 
 // Counter의 시작은 0부터 시작합니다.
 const Counter = () => {
-  const [cnt, setCnt] = useState(0);
+  const [count, setCount] = useState(0);
 
   const onClickIncrease = () => {
-    if(cnt < 10){
-      setCnt(cnt + 1)
-    }
-    else{
-      setCnt(10);
+    if(count < 10){
+      setCount(count + 1)
     }
   };
     
   const onClickDecrease = () => {
-    if(cnt > -10){
-      setCnt(cnt - 1)
+    if(count > -10){
+      setCount(count - 1)
     }
-    else{
-      setCnt(-10)
-    };  
   };
 
   return (
     <div className="counter--container">
       <button onClick={onClickDecrease}>-</button>
-      <p>{cnt}</p>
+      <p>{count}</p>
       <button onClick={onClickIncrease}>+</button>
     </div>
   );
